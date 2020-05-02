@@ -1,0 +1,23 @@
+SOME_DATABASE: './sentence_si_means.csv'
+CONFIG_NAME: 'glove_lstm'
+EXPERIMENT_NAME: 'glove_lstm'
+SINGLE_SENTENCE: True
+IS_ELMO: False
+IS_BERT: False
+PREDON: 'test'     ####### remember to set this to 'test' vs. 'train'
+CUDA: False
+
+
+TRAIN:
+    LR: 0.001       # set to 0.001
+    TOTAL_EPOCH: 800
+    INTERVAL: 10
+    START_EPOCH: 0
+
+LSTM:                      # can adjust these
+    FLAG: True
+    SEQ_LEN: 30             # set this to NONE ... or 110 ... originally =30
+    HIDDEN_DIM: 100
+    LAYERS: 2
+    DROP_PROB: 0.3
+    ATTN: False

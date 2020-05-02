@@ -1,0 +1,25 @@
+SOME_DATABASE: './sentence_si_means.csv'
+CONFIG_NAME: 'bert_lstm_d5_lr10_long'
+EXPERIMENT_NAME: 'bert_lstm_d5_lr10_long'
+SINGLE_SENTENCE: True
+IS_ELMO: False
+IS_BERT: True
+PREDON: 'train'     ####### remember to set this to 'test' vs. 'train'
+CUDA: False
+GPU_NUM: 0          ####### this is unique to BERT
+SAVE_PREDS: False
+
+
+TRAIN:
+    LR: 0.0001       # set to 0.001
+    TOTAL_EPOCH: 800
+    INTERVAL: 10
+    START_EPOCH: 0
+
+LSTM:                      # can adjust these
+    FLAG: True
+    SEQ_LEN: 50
+    HIDDEN_DIM: 100
+    LAYERS: 2
+    DROP_PROB: 0.5
+    ATTN: False
